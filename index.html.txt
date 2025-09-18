@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>Superhero App</h1>
+    <div class="gallery">
+        <img src="thor.jpg" alt="Thor">
+        <img src="ironman.png" alt="Iron Man">
+        <img src="hulk.jpg" alt="Hulk">
+        <img src="hawkeye.png" alt="Hawkeye">
+        <img src="captainamerica.jpg" alt="Captain America">
+        <img src="blackwidow.png" alt="Black Widow">
+    </div>
+</body>
+</html>

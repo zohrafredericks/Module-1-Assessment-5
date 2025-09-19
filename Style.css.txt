@@ -14,20 +14,22 @@ h1 {
 
 /* Gallery styling */
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display: block; /* stack images vertically */
     margin-top: 20px;
 }
 
 .gallery img {
-    width: 200px;
-    height: 200px;
+    width: 100%; /* full width of container/screen */
+    height: auto; /* keeps the aspect ratio */
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 0; /* optional: remove rounded corners */
+    box-shadow: none; /* optional: remove shadow for full-width */
+    margin-bottom: 20px; /* space between images */
     transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.02); /* subtle zoom effect */
 }
 
 .gallery img:hover {

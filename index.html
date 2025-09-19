@@ -4,12 +4,13 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Avengers Superhero App</title>
+<title>Avengers Superhero App - Vertical Layout</title>
 <style>
 /* Reset */
 * {
@@ -18,98 +19,72 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f0f0f0;
-    line-height: 1.6;
     color: #333;
+    line-height: 1.6;
 }
 
 /* Header */
 header {
     background: linear-gradient(135deg, #ff6f61, #ffcb61);
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
     font-size: 2em;
     color: white;
     font-weight: bold;
     margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* Navigation menu */
+/* Navigation */
 nav {
     display: flex;
     justify-content: center;
     background-color: #333;
-    margin-bottom: 30px;
+    padding: 10px 0;
     flex-wrap: wrap;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1em;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
     transition: 0.3s;
-    letter-spacing: 1px;
 }
 
 nav a:hover {
     background-color: #ff6f61;
-    color: #fff;
-    border-radius: 5px;
 }
 
-/* Gallery / Avengers cards */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 30px;
-}
-
-.gallery div {
-    width: 220px;
-    cursor: pointer;
-    text-align: center;
-    position: relative;
-}
-
-/* Images */
-.gallery img {
-    width: 100%;
-    border-radius: 15px;
-    transition: transform 0.3s;
-}
-
-.gallery div:hover img {
-    transform: scale(1.05);
-}
-
-/* Hover Bio Card */
-.bio {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 240px;
-    width: 250px;
+/* Avengers Vertical Cards */
+.avenger-card {
     background: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    text-align: left;
-    z-index: 10;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 15px;
 }
 
-.bio h4 {
+.avenger-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.avenger-card h3 {
+    margin: 15px 0 10px 0;
     color: #ff6f61;
-    margin-bottom: 10px;
+}
+
+.bio {
+    text-align: left;
+    padding: 0 15px;
 }
 
 .bio p {
@@ -117,9 +92,9 @@ nav a:hover {
 }
 
 /* About & Contact */
-.about {
+.about, .contact {
     max-width: 700px;
-    margin: 0 auto 30px auto;
+    margin: 30px auto;
     background: #fff;
     padding: 25px;
     border-radius: 10px;
@@ -127,37 +102,11 @@ nav a:hover {
     text-align: center;
 }
 
-.about h2 {
+.about h2, .contact h2 {
     color: #ff6f61;
-    margin-bottom: 20px;
-}
-
-.about p {
-    margin-bottom: 12px;
-    font-size: 1.1em;
-}
-
-/* Responsive */
-@media(max-width: 700px){
-    .gallery div {
-        width: 90%;
-    }
-    .bio {
-        position: static;
-        width: 100%;
-        margin-top: 10px;
-    }
+    margin-bottom: 15px;
 }
 </style>
-<script>
-// Show bio on hover
-function showBio(id) {
-    document.getElementById(id).style.display = 'block';
-}
-function hideBio(id) {
-    document.getElementById(id).style.display = 'none';
-}
-</script>
 </head>
 <body>
 
@@ -170,13 +119,12 @@ function hideBio(id) {
 </nav>
 
 <!-- Home Section -->
-<section id="home" class="gallery">
+<section id="home">
     <!-- Iron Man -->
-    <div onmouseover="showBio('ironman')" onmouseout="hideBio('ironman')" style="position: relative;">
+    <div class="avenger-card">
         <img src="images/avengers_02.jpg" alt="Iron Man">
-        <p>Iron Man</p>
-        <div class="bio" id="ironman">
-            <h4>Iron Man</h4>
+        <h3>Iron Man</h3>
+        <div class="bio">
             <p><strong>Full Name:</strong> Tony Stark</p>
             <p><strong>Place Of Birth:</strong> Long Island, New York</p>
             <p><strong>Alignment:</strong> Good</p>
@@ -192,11 +140,10 @@ function hideBio(id) {
     </div>
 
     <!-- Thor -->
-    <div onmouseover="showBio('thor')" onmouseout="hideBio('thor')" style="position: relative;">
+    <div class="avenger-card">
         <img src="images/avengers_01.jpg" alt="Thor">
-        <p>Thor</p>
-        <div class="bio" id="thor">
-            <h4>Thor</h4>
+        <h3>Thor</h3>
+        <div class="bio">
             <p><strong>Full Name:</strong> Thor Odinson</p>
             <p><strong>Place Of Birth:</strong> Asgard</p>
             <p><strong>Alignment:</strong> Good</p>
@@ -212,11 +159,10 @@ function hideBio(id) {
     </div>
 
     <!-- Hulk -->
-    <div onmouseover="showBio('hulk')" onmouseout="hideBio('hulk')" style="position: relative;">
+    <div class="avenger-card">
         <img src="images/avengers_03.jpg" alt="Hulk">
-        <p>Hulk</p>
-        <div class="bio" id="hulk">
-            <h4>Hulk</h4>
+        <h3>Hulk</h3>
+        <div class="bio">
             <p><strong>Full Name:</strong> Bruce Banner</p>
             <p><strong>Place Of Birth:</strong> Dayton, Ohio</p>
             <p><strong>Alignment:</strong> Good</p>
@@ -232,11 +178,10 @@ function hideBio(id) {
     </div>
 
     <!-- Hawkeye -->
-    <div onmouseover="showBio('hawkeye')" onmouseout="hideBio('hawkeye')" style="position: relative;">
+    <div class="avenger-card">
         <img src="images/avengers_04.jpg" alt="Hawkeye">
-        <p>Hawkeye</p>
-        <div class="bio" id="hawkeye">
-            <h4>Hawkeye</h4>
+        <h3>Hawkeye</h3>
+        <div class="bio">
             <p><strong>Full Name:</strong> Clint Barton</p>
             <p><strong>Place Of Birth:</strong> Waverly, Iowa</p>
             <p><strong>Alignment:</strong> Good</p>
@@ -252,11 +197,10 @@ function hideBio(id) {
     </div>
 
     <!-- Captain America -->
-    <div onmouseover="showBio('cap')" onmouseout="hideBio('cap')" style="position: relative;">
+    <div class="avenger-card">
         <img src="images/avengers_05.jpg" alt="Captain America">
-        <p>Captain America</p>
-        <div class="bio" id="cap">
-            <h4>Captain America</h4>
+        <h3>Captain America</h3>
+        <div class="bio">
             <p><strong>Full Name:</strong> Steve Rogers</p>
             <p><strong>Place Of Birth:</strong> Brooklyn, New York</p>
             <p><strong>Alignment:</strong> Good</p>
@@ -272,11 +216,10 @@ function hideBio(id) {
     </div>
 
     <!-- Black Widow -->
-    <div onmouseover="showBio('blackwidow')" onmouseout="hideBio('blackwidow')" style="position: relative;">
+    <div class="avenger-card">
         <img src="images/avengers_06.jpg" alt="Black Widow">
-        <p>Black Widow</p>
-        <div class="bio" id="blackwidow">
-            <h4>Black Widow</h4>
+        <h3>Black Widow</h3>
+        <div class="bio">
             <p><strong>Full Name:</strong> Natasha Romanoff</p>
             <p><strong>Place Of Birth:</strong> Stalingrad</p>
             <p><strong>Alignment:</strong> Good</p>
@@ -300,22 +243,12 @@ function hideBio(id) {
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="about">
+<section id="contact" class="contact">
     <h2>Contact Us</h2>
     <p>Phone: +27 689 4575</p>
     <p>Email: appdevelopment@capetown.co.za</p>
     <p>Address: Cape Town, South Africa</p>
 </section>
-
-<script>
-// Show bio on hover
-function showBio(id) {
-    document.getElementById(id).style.display = 'block';
-}
-function hideBio(id) {
-    document.getElementById(id).style.display = 'none';
-}
-</script>
 
 </body>
 </html>

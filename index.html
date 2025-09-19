@@ -1,6 +1,7 @@
 
       
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +17,7 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Smooth scrolling */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -50,8 +51,8 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    padding: 15px 25px;
-    font-size: 1.1em;
+    padding: 10px 20px; /* smaller padding for menu blocks */
+    font-size: 1em;
     transition: 0.3s;
     letter-spacing: 1px;
 }
@@ -67,12 +68,12 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     margin-bottom: 30px;
 }
 
 .gallery div {
-    width: 150px;
+    width: 220px; /* bigger images */
     cursor: pointer;
     text-align: center;
     position: relative;
@@ -94,7 +95,7 @@ nav a:hover {
     display: none;
     position: absolute;
     top: 0;
-    left: 160px; /* show next to image on desktop */
+    left: 240px; /* adjust for bigger image */
     width: 250px;
     background: #fff;
     padding: 15px;
@@ -115,10 +116,10 @@ nav a:hover {
 
 /* About & Contact */
 .about {
-    max-width: 800px;
+    max-width: 700px; /* slightly smaller blocks */
     margin: 0 auto 30px auto;
     background: #fff;
-    padding: 30px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     text-align: center;
@@ -130,17 +131,17 @@ nav a:hover {
 }
 
 .about p {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-size: 1.1em;
 }
 
 /* Responsive */
 @media(max-width: 700px){
     .gallery div {
-        width: 120px;
+        width: 150px;
     }
     .bio {
-        position: static; /* display below image */
+        position: static;
         width: 100%;
         margin-top: 10px;
     }
@@ -294,8 +295,6 @@ function hideBio(id) {
     <h2>About Us</h2>
     <p>We are an App Development Company based in Cape Town, South Africa.</p>
     <p>We take pride in creating amazing apps!</p>
-    <p>You can contact us on <strong>+27 689 4575</strong> or email <strong>appdevelopment@capetown.co.za</strong></p>
-    <p>We look forward to hearing from you!</p>
 </section>
 
 <!-- Contact Section -->

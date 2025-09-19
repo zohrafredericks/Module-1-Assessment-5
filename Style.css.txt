@@ -1,88 +1,86 @@
 
-/* Body styling */
+
+/* Body and header */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     text-align: center;
-    padding: 20px;
+    padding: 0;
     margin: 0;
 }
 
-/* Page title */
-h1 {
-    color: #333;
-    margin-bottom: 20px;
+header {
+    background: linear-gradient(135deg, #ff6f61, #ffcb61);
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px rgba(0,0,0,0.2);
 }
 
 /* Gallery styling */
 .gallery {
-    display: block; /* stack images vertically */
-    margin-top: 20px;
+    display: block;  /* stack images vertically */
+    margin: 0;
+    padding: 0;
 }
 
 figure {
+    position: relative; /* needed for overlay */
     margin: 0;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.gallery img {
-    width: 100%; /* full width of container/screen */
-    height: auto; /* keep aspect ratio */
+figure:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+img {
+    width: 100%;    /* full width of screen */
+    height: auto;   /* keep aspect ratio */
     object-fit: cover;
-    border-radius: 0; /* remove rounded corners for full-width */
-    box-shadow: none; /* remove shadow for full-width */
-    margin-bottom: 20px; /* space between images */
-    transition: transform 0.3s;
 }
 
-.gallery img:hover {
-    transform: scale(1.05); /* subtle zoom effect */
-}
-
+/* Caption styling */
 figcaption {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* Contact form styling */
-form {
-    background-color: #fff;
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-input, textarea {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #555;
-}
-
-/* Links styling */
-a {
     color: #333;
-    text-decoration: none;
+    margin-top: 8px;
+    margin-bottom: 10px;
 }
 
-a:hover {
-    text-decoration: underline;
+/* Overlay description */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+}
+
+figure:hover .overlay {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    header {
+        font-size: 2em;
+        padding: 30px 10px;
+    }
+
+    figcaption, .overlay {
+        font-size: 14px;
+    }
 }

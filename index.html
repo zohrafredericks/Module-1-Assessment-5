@@ -3,6 +3,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,7 +53,7 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px; /* smaller padding for menu blocks */
+    padding: 10px 20px;
     font-size: 1em;
     transition: 0.3s;
     letter-spacing: 1px;
@@ -64,7 +65,7 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* Gallery */
+/* Gallery / Avengers cards */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -74,7 +75,7 @@ nav a:hover {
 }
 
 .gallery div {
-    width: 220px; /* bigger images on desktop */
+    width: 220px;
     cursor: pointer;
     text-align: center;
     position: relative;
@@ -96,7 +97,7 @@ nav a:hover {
     display: none;
     position: absolute;
     top: 0;
-    left: 240px; /* adjust for bigger image */
+    left: 240px;
     width: 250px;
     background: #fff;
     padding: 15px;
@@ -117,7 +118,7 @@ nav a:hover {
 
 /* About & Contact */
 .about {
-    max-width: 700px; /* smaller blocks */
+    max-width: 700px;
     margin: 0 auto 30px auto;
     background: #fff;
     padding: 25px;
@@ -139,10 +140,10 @@ nav a:hover {
 /* Responsive */
 @media(max-width: 700px){
     .gallery div {
-        width: 90%; /* almost full screen width on mobile */
+        width: 90%;
     }
     .bio {
-        position: static; /* display below image */
+        position: static;
         width: 100%;
         margin-top: 10px;
     }
@@ -170,28 +171,8 @@ function hideBio(id) {
 
 <!-- Home Section -->
 <section id="home" class="gallery">
-    <!-- Thor -->
-    <div onmouseover="showBio('thor')" onmouseout="hideBio('thor')">
-        <img src="images/avengers_01.jpg" alt="Thor">
-        <p>Thor</p>
-        <div class="bio" id="thor">
-            <h4>Thor</h4>
-            <p><strong>Full Name:</strong> Thor Odinson</p>
-            <p><strong>Place Of Birth:</strong> Asgard</p>
-            <p><strong>Alignment:</strong> Good</p>
-            <p><strong>Gender:</strong> Male</p>
-            <p><strong>Race:</strong> Asgardian</p>
-            <p><strong>Intelligence:</strong> 69%</p>
-            <p><strong>Strength:</strong> 100%</p>
-            <p><strong>Speed:</strong> 92%</p>
-            <p><strong>Durability:</strong> 100%</p>
-            <p><strong>Power:</strong> 100%</p>
-            <p><strong>Combat:</strong> 85%</p>
-        </div>
-    </div>
-
     <!-- Iron Man -->
-    <div onmouseover="showBio('ironman')" onmouseout="hideBio('ironman')">
+    <div onmouseover="showBio('ironman')" onmouseout="hideBio('ironman')" style="position: relative;">
         <img src="images/avengers_02.jpg" alt="Iron Man">
         <p>Iron Man</p>
         <div class="bio" id="ironman">
@@ -210,8 +191,28 @@ function hideBio(id) {
         </div>
     </div>
 
+    <!-- Thor -->
+    <div onmouseover="showBio('thor')" onmouseout="hideBio('thor')" style="position: relative;">
+        <img src="images/avengers_01.jpg" alt="Thor">
+        <p>Thor</p>
+        <div class="bio" id="thor">
+            <h4>Thor</h4>
+            <p><strong>Full Name:</strong> Thor Odinson</p>
+            <p><strong>Place Of Birth:</strong> Asgard</p>
+            <p><strong>Alignment:</strong> Good</p>
+            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Race:</strong> Asgardian</p>
+            <p><strong>Intelligence:</strong> 69%</p>
+            <p><strong>Strength:</strong> 100%</p>
+            <p><strong>Speed:</strong> 92%</p>
+            <p><strong>Durability:</strong> 100%</p>
+            <p><strong>Power:</strong> 100%</p>
+            <p><strong>Combat:</strong> 85%</p>
+        </div>
+    </div>
+
     <!-- Hulk -->
-    <div onmouseover="showBio('hulk')" onmouseout="hideBio('hulk')">
+    <div onmouseover="showBio('hulk')" onmouseout="hideBio('hulk')" style="position: relative;">
         <img src="images/avengers_03.jpg" alt="Hulk">
         <p>Hulk</p>
         <div class="bio" id="hulk">
@@ -231,7 +232,7 @@ function hideBio(id) {
     </div>
 
     <!-- Hawkeye -->
-    <div onmouseover="showBio('hawkeye')" onmouseout="hideBio('hawkeye')">
+    <div onmouseover="showBio('hawkeye')" onmouseout="hideBio('hawkeye')" style="position: relative;">
         <img src="images/avengers_04.jpg" alt="Hawkeye">
         <p>Hawkeye</p>
         <div class="bio" id="hawkeye">
@@ -251,7 +252,7 @@ function hideBio(id) {
     </div>
 
     <!-- Captain America -->
-    <div onmouseover="showBio('cap')" onmouseout="hideBio('cap')">
+    <div onmouseover="showBio('cap')" onmouseout="hideBio('cap')" style="position: relative;">
         <img src="images/avengers_05.jpg" alt="Captain America">
         <p>Captain America</p>
         <div class="bio" id="cap">
@@ -271,7 +272,7 @@ function hideBio(id) {
     </div>
 
     <!-- Black Widow -->
-    <div onmouseover="showBio('blackwidow')" onmouseout="hideBio('blackwidow')">
+    <div onmouseover="showBio('blackwidow')" onmouseout="hideBio('blackwidow')" style="position: relative;">
         <img src="images/avengers_06.jpg" alt="Black Widow">
         <p>Black Widow</p>
         <div class="bio" id="blackwidow">
@@ -305,6 +306,16 @@ function hideBio(id) {
     <p>Email: appdevelopment@capetown.co.za</p>
     <p>Address: Cape Town, South Africa</p>
 </section>
+
+<script>
+// Show bio on hover
+function showBio(id) {
+    document.getElementById(id).style.display = 'block';
+}
+function hideBio(id) {
+    document.getElementById(id).style.display = 'none';
+}
+</script>
 
 </body>
 </html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avengers Superhero App - Vertical Layout</title>
+<style>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #ff6f61, #ffcb61);
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #ff6f61;
+}
+
+/* Avengers Vertical Cards */
+.avenger-card {
+    background: #fff;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.avenger-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.avenger-card h3 {
+    margin: 15px 0 10px 0;
+    color: #ff6f61;
+}
+
+.bio {
+    text-align: left;
+    padding: 0 15px;
+}
+
+.bio p {
+    margin: 5px 0;
+}
+
+/* About & Contact */
+.about, .contact {
+    max-width: 700px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.about h2, .contact h2 {
+    color: #ff6f61;
+    margin-bottom: 15px;
+}
+</style>
+</head>
+<body>
+
+<header>Avengers Superhero App</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- Home Section -->
+<section id="home">
+    <!-- Iron Man -->
+    <div class="avenger-card">
+        <img src="images/avengers_02.jpg" alt="Iron Man">
+        <h3>Iron Man</h3>
+        <div class="bio">
+            <p><strong>Full Name:</strong> Tony Stark</p>
+            <p><strong>Place Of Birth:</strong> Long Island, New York</p>
+            <p><strong>Alignment:</strong> Good</p>
+            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Race:</strong> Human</p>
+            <p><strong>Intelligence:</strong> 100%</p>
+            <p><strong>Strength:</strong> 85%</p>
+            <p><strong>Speed:</strong> 58%</p>
+            <p><strong>Durability:</strong> 85%</p>
+            <p><strong>Power:</strong> 100%</p>
+            <p><strong>Combat:</strong> 64%</p>
+        </div>
+    </div>
+
+    <!-- Thor -->
+    <div class="avenger-card">
+        <img src="images/avengers_01.jpg" alt="Thor">
+        <h3>Thor</h3>
+        <div class="bio">
+            <p><strong>Full Name:</strong> Thor Odinson</p>
+            <p><strong>Place Of Birth:</strong> Asgard</p>
+            <p><strong>Alignment:</strong> Good</p>
+            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Race:</strong> Asgardian</p>
+            <p><strong>Intelligence:</strong> 69%</p>
+            <p><strong>Strength:</strong> 100%</p>
+            <p><strong>Speed:</strong> 92%</p>
+            <p><strong>Durability:</strong> 100%</p>
+            <p><strong>Power:</strong> 100%</p>
+            <p><strong>Combat:</strong> 85%</p>
+        </div>
+    </div>
+
+    <!-- Hulk -->
+    <div class="avenger-card">
+        <img src="images/avengers_03.jpg" alt="Hulk">
+        <h3>Hulk</h3>
+        <div class="bio">
+            <p><strong>Full Name:</strong> Bruce Banner</p>
+            <p><strong>Place Of Birth:</strong> Dayton, Ohio</p>
+            <p><strong>Alignment:</strong> Good</p>
+            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Race:</strong> Human/Mutated</p>
+            <p><strong>Intelligence:</strong> 88%</p>
+            <p><strong>Strength:</strong> 100%</p>
+            <p><strong>Speed:</strong> 63%</p>
+            <p><strong>Durability:</strong> 100%</p>
+            <p><strong>Power:</strong> 98%</p>
+            <p><strong>Combat:</strong> 85%</p>
+        </div>
+    </div>
+
+    <!-- Hawkeye -->
+    <div class="avenger-card">
+        <img src="images/avengers_04.jpg" alt="Hawkeye">
+        <h3>Hawkeye</h3>
+        <div class="bio">
+            <p><strong>Full Name:</strong> Clint Barton</p>
+            <p><strong>Place Of Birth:</strong> Waverly, Iowa</p>
+            <p><strong>Alignment:</strong> Good</p>
+            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Race:</strong> Human</p>
+            <p><strong>Intelligence:</strong> 69%</p>
+            <p><strong>Strength:</strong> 35%</p>
+            <p><strong>Speed:</strong> 30%</p>
+            <p><strong>Durability:</strong> 55%</p>
+            <p><strong>Power:</strong> 40%</p>
+            <p><strong>Combat:</strong> 90%</p>
+        </div>
+    </div>
+
+    <!-- Captain America -->
+    <div class="avenger-card">
+        <img src="images/avengers_05.jpg" alt="Captain America">
+        <h3>Captain America</h3>
+        <div class="bio">
+            <p><strong>Full Name:</strong> Steve Rogers</p>
+            <p><strong>Place Of Birth:</strong> Brooklyn, New York</p>
+            <p><strong>Alignment:</strong> Good</p>
+            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Race:</strong> Human</p>
+            <p><strong>Intelligence:</strong> 69%</p>
+            <p><strong>Strength:</strong> 19%</p>
+            <p><strong>Speed:</strong> 38%</p>
+            <p><strong>Durability:</strong> 55%</p>
+            <p><strong>Power:</strong> 60%</p>
+            <p><strong>Combat:</strong> 100%</p>
+        </div>
+    </div>
+
+    <!-- Black Widow -->
+    <div class="avenger-card">
+        <img src="images/avengers_06.jpg" alt="Black Widow">
+        <h3>Black Widow</h3>
+        <div class="bio">
+            <p><strong>Full Name:</strong> Natasha Romanoff</p>
+            <p><strong>Place Of Birth:</strong> Stalingrad</p>
+            <p><strong>Alignment:</strong> Good</p>
+            <p><strong>Gender:</strong> Female</p>
+            <p><strong>Race:</strong> Human</p>
+            <p><strong>Intelligence:</strong> 75%</p>
+            <p><strong>Strength:</strong> 15%</p>
+            <p><strong>Speed:</strong> 30%</p>
+            <p><strong>Durability:</strong> 30%</p>
+            <p><strong>Power:</strong> 36%</p>
+            <p><strong>Combat:</strong> 100%</p>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <h2>About Us</h2>
+    <p>We are an App Development Company based in Cape Town, South Africa.</p>
+    <p>We take pride in creating amazing apps!</p>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Phone: +27 689 4575</p>
+    <p>Email: appdevelopment@capetown.co.za</p>
+    <p>Address: Cape Town, South Africa</p>
+</section>
+
+</body>
+</html>

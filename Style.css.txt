@@ -1,3 +1,5 @@
+
+/* Body styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -18,22 +20,28 @@ h1 {
     margin-top: 20px;
 }
 
+figure {
+    margin: 0;
+}
+
 .gallery img {
     width: 100%; /* full width of container/screen */
-    height: auto; /* keeps the aspect ratio */
+    height: auto; /* keep aspect ratio */
     object-fit: cover;
-    border-radius: 0; /* optional: remove rounded corners */
-    box-shadow: none; /* optional: remove shadow for full-width */
+    border-radius: 0; /* remove rounded corners for full-width */
+    box-shadow: none; /* remove shadow for full-width */
     margin-bottom: 20px; /* space between images */
     transition: transform 0.3s;
 }
 
 .gallery img:hover {
-    transform: scale(1.02); /* subtle zoom effect */
+    transform: scale(1.05); /* subtle zoom effect */
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
+figcaption {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 /* Contact form styling */

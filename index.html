@@ -2,6 +2,7 @@
       
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,7 +74,7 @@ nav a:hover {
 }
 
 .gallery div {
-    width: 220px; /* bigger images */
+    width: 220px; /* bigger images on desktop */
     cursor: pointer;
     text-align: center;
     position: relative;
@@ -116,7 +117,7 @@ nav a:hover {
 
 /* About & Contact */
 .about {
-    max-width: 700px; /* slightly smaller blocks */
+    max-width: 700px; /* smaller blocks */
     margin: 0 auto 30px auto;
     background: #fff;
     padding: 25px;
@@ -138,10 +139,10 @@ nav a:hover {
 /* Responsive */
 @media(max-width: 700px){
     .gallery div {
-        width: 150px;
+        width: 90%; /* almost full screen width on mobile */
     }
     .bio {
-        position: static;
+        position: static; /* display below image */
         width: 100%;
         margin-top: 10px;
     }
